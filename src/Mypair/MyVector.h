@@ -1,5 +1,6 @@
 #pragma once
 #include "iterator.inl"
+#include <iostream>
 
 template <typename T>
 class MyVector
@@ -26,14 +27,15 @@ void MyVector<T>::Push_Back(MyNode<T>* _current) {
 		Begin == _current;
 	}
 	else {
-
+		current->prev = current;
+		current = _current;
 	}
 }
 
 template <typename T>
 float MyVector<T>::size() {
-	int size = End * T;
-	std::cout<< size
+	int size = End * sizeof(T);
+	std::cout << size;
 }
 
 template <typename T>

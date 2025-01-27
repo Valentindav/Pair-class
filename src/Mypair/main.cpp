@@ -37,7 +37,8 @@ int main()
 	std::cout << *ite << std::endl;
 	--ite;
 	std::cout << *ite << std::endl;
-	MyVector vector;
+	MyVector vec;
+	
 
 	return 0;
 }
