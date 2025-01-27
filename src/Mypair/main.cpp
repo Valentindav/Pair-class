@@ -37,8 +37,16 @@ int main()
 	std::cout << *ite << std::endl;
 	--ite;
 	std::cout << *ite << std::endl;
-	MyVector vec;
-	
 
+	MyVector<int> vec;
+	vec.Push_Back(10);
+	vec.Push_Back(20);
+	vec.Push_Back(30);
+	std::cout << "Vector size: " << vec.size() << std::endl;
+
+	for (Iterator<int> it = vec.begin(); it != vec.end(); ++it) {
+		std::cout << *it << " ";
+	}
+	std::cout << std::endl;
 	return 0;
 }

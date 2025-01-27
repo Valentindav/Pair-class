@@ -9,6 +9,8 @@ public :
 	const Iterator<T>& operator ++();
 	const Iterator<T>& operator --();
 	const T& operator *() const;
+	bool operator==(const Iterator<T>& other) const;
+	bool operator!=(const Iterator<T>& other) const;
 };
 
 template <typename T>
@@ -32,4 +34,14 @@ const Iterator<T>& Iterator<T>::operator--() {
 template <typename T>
 const T& Iterator<T>::operator*() const{
 	return current->value;
+}
+
+template <typename T>
+bool Iterator<T>::operator==(const Iterator<T>& other) const {
+	return this->current == other.current;
+}
+
+template <typename T>
+bool Iterator<T>::operator!=(const Iterator<T>& other) const {
+	return this->current != other.current;
 }
