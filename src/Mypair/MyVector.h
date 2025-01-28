@@ -51,7 +51,7 @@ Iterator<T> MyVector<T>::end() const {
 template <typename T>
 const T& MyVector<T>::operator[](size_t index) const {
     if (index >= Count) {
-        throw std::out_of_range("Index hors limites");
+        std::cout << "out_of_range(Index hors limites)";
     }
     MyNode<T>* current = Begin;
     for (size_t i = 0; i < index; ++i) {
